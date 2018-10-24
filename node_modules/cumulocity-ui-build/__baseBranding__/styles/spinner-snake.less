@@ -1,0 +1,43 @@
+/*
+// SVG element to include
+
+<svg class="spinner-snake" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+  <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg>
+
+*/
+
+@spinner-offset: 210;
+@spinner-duration: 1.4s;
+
+.spinner-snake {
+  animation: rotator @spinner-duration ease infinite;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.spinner-snake .path {
+  stroke-dasharray: @spinner-offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  stroke: @spinner-color;
+  animation:
+    dash @spinner-duration ease-in-out infinite;
+}
+
+
+
+@keyframes dash {
+ 0% { stroke-dashoffset: @spinner-offset; }
+ 50% {
+   stroke-dashoffset: @spinner-offset/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: @spinner-offset;
+   transform:rotate(450deg);
+ }
+}

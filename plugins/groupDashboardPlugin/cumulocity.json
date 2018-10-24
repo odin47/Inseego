@@ -1,0 +1,15 @@
+{
+  "description": "GroupDashboard plugin",
+  "ngModules": [
+    "inseego.groupdashboard"
+  ],
+  "js": [
+    "groupDashboard.module.js",
+    "constants.js",
+    "groupDashboard.config.js",
+    "groupDashboard.component.js"    
+  ],
+  "imports": [],
+  "css": [],
+  "copy": []
+}

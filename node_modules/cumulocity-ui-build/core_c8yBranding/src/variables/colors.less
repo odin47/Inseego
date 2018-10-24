@@ -1,0 +1,658 @@
+// Colors
+@brand-primary:                                 @blue-primary;
+@brand-primary-light:                           @blue-65;
+@brand-complementary:                           @blue-35;
+@brand-accent:                                  @pink-accent; 
+@brand-success:                                 #008800;//@green-38;
+@brand-info:                                    @blue-77;
+@dark-info:                                     @blue-27;
+@brand-danger:                                  @red-44;
+@dark-danger:                                   @red-44;
+@brand-warning:                                 @orange-56;
+@dark-warning:                                  @orange-45;
+
+@gray-base:                                     @black; // legacy from bootstrap
+@gray-text:                                     @almost-black; // 12.63:1 AA
+@gray-darker:                                   @blue-20; //12.43:1 AA
+@gray-dark:                                     @gray-30;
+@gray-medium-dark:                              @gray-40;
+@gray-medium:                                   @gray-medium-dark;
+@gray:                                          @gray-50;
+@gray-light:                                    @gray-80;
+@gray-lighter:                                  @gray-90;
+@gray-white:                                    @gray-95;
+
+
+//=====================================
+// GENERIC
+//=====================================
+@body-background-color:                         #f2f3f4;
+//** Global color for active items (e.g., navs or dropdowns).
+@component-active-color:                        white;
+//** Global background color for active items (e.g., navs or dropdowns).
+@component-active-bg:                           @brand-primary;
+//** Global inner border color for components
+@component-border-color:                        fade(black, 5%);
+//** Global color and opacity for action buttons in components
+@component-actions-btn-color:                   @gray-darker;
+@component-actions-btn-opacity:                 .3;
+
+// spinner component-active-color
+@spinner-color:                                 @brand-primary;
+
+// expanded background color
+@expanded-bg-color:                             @gray-white;
+
+// realtime pulse color
+@pulse-color:                                   lighten(@brand-success, 10%);
+
+@realtime-added-element-color:                  @input-focus-color;
+
+//Icons
+@icon-white-color-light:                        @brand-primary-light;
+@icon-white-color-dark:                       white;
+@icon-dark-color-light:                         @brand-primary-light;
+@icon-dark-color-dark:                          @gray-darker;
+
+
+//=====================================
+//FORM STATE VARS
+//=====================================
+
+//## colors for form feedback states and alerts.
+
+@state-success-text:                            @brand-success;
+@state-success-bg:                              @brand-success;
+@state-success-border:                          @brand-success;
+
+@state-info-text:                               @dark-info;
+@state-info-bg:                                 @brand-info;
+@state-info-border:                             @brand-info;
+
+
+@state-system-text:                             @brand-primary;
+@state-system-bg:                               @brand-primary;
+@state-system-border:                           @brand-primary;
+
+@state-warning-text:                            @orange-38;
+@state-warning-bg:                              @brand-warning;
+@state-warning-border:                          @brand-warning;
+
+@state-danger-text:                             @dark-danger;
+@state-danger-bg:                               @brand-danger;
+@state-danger-border:                           @brand-danger;
+
+
+
+//=====================================
+//MAIN-HEADER
+//=====================================
+@header-app-name:                               @gray-darker;
+@headerColor:                                 white;
+@header-text-color:                             @gray-darker;
+@header-text-color-hover:                       @brand-primary;
+@header-border-color:                           fade(@gray-dark, 5%);
+
+
+//=====================================
+//NAVIGATOR
+//=====================================
+@navColor:                                      @brand-primary;
+@navColorHeader:                                @brand-primary;
+@navigator-text-color:                        white;
+@navigator-title-color:                       white;
+@navigator-separator-color:                     darken(@navColor, 3%);
+@navigator-active-color:                      white;
+@navigator-active-bg:                           @brand-complementary;
+@navigator-scrollbar-track-color:             rgba(255, 255, 255, .1);
+
+
+//=====================================
+// RIGHT DRAWER
+//=====================================
+@drawer-bg:                                     @navColor;
+@drawer-color:                                  @navigator-text-color;
+@drawer-separator-color-light:                  lighten(@navigator-separator-color, 5%);
+@drawer-separator-color-dark:                   darken(@navigator-separator-color, 5%);
+@drawer-hover:                                  @brand-complementary;
+@drawer-legend:                                 @navigator-text-color;
+/* change the icons used. Options:
+'white'for using the same colors as .c8y-icon-white
+'duo'for using the same colors as .c8y-icon-duocolor
+'none' to use the default @drawer-color*/
+@drawer-c8y-icon: 'none';
+
+
+
+
+
+//=====================================
+//TOOLBAR
+//=====================================
+@toolbar-background:                          white;
+@toolbar-color:                                 @gray-darker;
+
+
+
+//=====================================
+//ALERTS
+//=====================================
+
+@alert-success-bg:                              white;
+@alert-success-text:                            @state-success-text;
+@alert-success-border:                          @state-success-border;
+
+@alert-info-bg:                                 white;
+@alert-info-text:                               @state-info-text;
+@alert-info-border:                             @state-info-border;
+
+
+@alert-system-bg:                              white;
+@alert-system-text:                             @state-system-text;
+@alert-system-border:                           @state-system-border;
+
+@alert-warning-bg:                              white;
+@alert-warning-text:                            @state-warning-text;
+@alert-warning-border:                          @state-warning-border;
+
+@alert-danger-bg:                               white;
+@alert-danger-text:                             @state-danger-text;
+@alert-danger-border:                           @state-danger-border;
+
+
+//=====================================
+//BADGES
+//=====================================
+@badge-success:                                 @brand-success;
+@badge-warning:                                 @brand-warning;
+@badge-danger:                                  @brand-danger;
+@badge-info:                                    @brand-info;
+
+
+//=====================================
+//BREADCRUMBS
+//=====================================
+
+//** Breadcrumb background color
+@breadcrumb-bg:                                 @gray-white;
+//** Breadcrumb text color
+@breadcrumb-color:                              @gray;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color:                       @gray;
+
+
+//=====================================
+//BUTTONS
+//=====================================
+
+@btn-default-color:                             @gray-dark;
+@btn-default-bg:                              white;
+@btn-default-border:                            fade(@gray-dark, 10%);
+@btn-primary-color:                           white;
+@btn-primary-bg:                                @brand-primary;
+@btn-primary-border:                            @brand-primary;
+@btn-success-color:                             white;
+@btn-success-bg:                                @brand-success;
+@btn-success-border:                            @brand-success;
+@btn-info-color:                                white;
+@btn-info-bg:                                   @brand-info;
+@btn-info-border:                               @brand-info;
+@btn-warning-color:                           white;
+@btn-warning-bg:                                @brand-warning;
+@btn-warning-border:                            @brand-warning; 
+@btn-danger-color:                            white;
+@btn-danger-bg:                                 @brand-danger;
+@btn-danger-border:                             @brand-danger;
+@btn-link-disabled-color:                       @gray-light;
+
+
+//=====================================
+//DROPDOWNS
+//=====================================
+
+//## Dropdown menu container and contents.
+//** Background for the dropdown menu.
+@dropdown-bg:                                 white;
+//** Dropdown menu `border-color`.
+@dropdown-border:                               transparent;
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:                      @gray-lighter;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg:                           @component-border-color;
+//** Dropdown link text color.
+@dropdown-link-color:                           @gray-dark;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:                     @brand-primary;
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:                      white;
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:                    @component-active-color;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:                       @component-active-bg;
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:                  @gray-light;
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:                         @gray;
+
+
+
+
+
+
+//=====================================
+//FORMS
+//=====================================
+
+
+@label-text-color:                              @gray;
+
+@legend-color:                                  @label-text-color;
+
+@input-focus-color:                             @blue-65;
+
+@input-placeholder-color:                       @gray;
+
+//** `<input>` background color
+@input-bg:                                    white;
+//** `<input disabled>` background color
+@input-bg-disabled:                             @gray-white;
+
+@input-color:                                   @gray-text;
+//** `<input>` border color
+@input-border:                                  #e5e5e5;
+
+//** Border color for inputs on focus
+@input-border-focus:                            @input-focus-color;
+
+//** Background color for textual input addons
+@input-group-addon-bg:                          @input-border;
+
+//** Border color for textual input addons
+@input-group-addon-border-color:                @input-border;
+
+//** Placeholder text color
+@input-color-placeholder:                       @input-placeholder-color;
+
+@switch-active-bg:                              @brand-primary-light;
+
+
+@track-color:                                   @input-border;
+@track-focus-color:                             lighten(@input-border-focus, 5%);
+@thumb-color:                                 white;
+@thumb-border-color:                            @gray-light;
+@track-border-color:                            transparent;
+
+
+//=====================================
+//LABEL
+//=====================================
+//** Default label background color
+@label-default-bg:                              @gray-light;
+//** Primary label background color
+@label-primary-bg:                              @brand-primary;
+//** Success label background color
+@label-success-bg:                              @brand-success;
+//** Info label background color
+@label-info-bg:                                 @brand-info;
+//** Warning label background color
+@label-warning-bg:                              @brand-warning;
+//** Danger label background color
+@label-danger-bg:                               @brand-danger;
+
+//** Default label text color
+@label-color:                                 white;
+//** Default text color of a linked label
+@label-link-hover-color:                      white;
+
+
+//=====================================
+//LIST GROUP
+//=====================================
+
+@list-group-bg:                               white;
+//** `.list-group-item` border color
+@list-group-border:                            @component-border-color;//fade(black, 5%);
+//** Background color of single list items on hover
+@list-group-hover-bg:                           @gray-white;
+//** Text color of active list items
+@list-group-active-color:                       @component-active-color;
+//** Background color of active list items
+@list-group-active-bg:                          @component-active-bg;
+//** Border color of active list elements
+@list-group-active-border:                      @list-group-active-bg;
+//** Text color for content within active list items
+@list-group-active-text-color:                  lighten(@list-group-active-bg, 40%);
+//** Text color of disabled list items
+@list-group-disabled-color:                     @gray;
+//** Background color of disabled list items
+@list-group-disabled-bg:                        @gray-light;
+//** Text color for content within disabled list items
+@list-group-disabled-text-color:                @list-group-disabled-color;
+//** color for the list group icon
+@list-group-icon-color:                         @gray-darker;
+//** color for the list-group-item acting as link
+@list-group-link-color:                         @gray-darker;
+@list-group-link-hover-color:                   @list-group-link-color;
+//** color for the list-group-link heading
+@list-group-link-heading-color:                 inherit;
+
+
+//=====================================
+//MODAL
+//=====================================
+@modal-header:                                  @brand-primary;
+@modal-header-primary:                          @brand-primary;
+@modal-header-success:                          @brand-success;
+@modal-header-info:                             @brand-info;
+@modal-header-warning:                          @brand-warning;
+@modal-header-danger:                           @brand-danger;
+@modal-header-text:                             white;
+//** Modal header border color
+@modal-header-border-color:                     @component-border-color;
+//** Modal footer border color
+@modal-footer-border-color:                     @modal-header-border-color;
+//** Background color of modal content area
+@modal-content-bg:                            white;
+//** Modal content border color
+@modal-content-border-color:                    @component-border-color;
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color:         #ccc;
+//** Modal backdrop background color
+@modal-backdrop-bg:                           #000;
+
+//=====================================
+//NAVS
+//=====================================
+
+//=== Shared nav styles
+@nav-link-hover-bg:                             transparent;
+@nav-disabled-link-color:                       @gray-light;
+@nav-disabled-link-hover-color:                 @gray-light;
+
+//== Tabs
+@nav-tabs-border-color:                         fade(black, 5%);
+@nav-tabs-active-link-hover-bg:                 transparent;
+@nav-tabs-active-link-hover-color:              @brand-primary;
+@nav-tabs-active-link-hover-border-color:       @brand-primary;
+
+
+@nav-tabs-justified-link-border-color:          @gray-lighter;
+@nav-tabs-justified-active-link-border-color:   @body-bg;
+
+
+//tabs vertical
+@nav-tabs-vertical-bg:                          "";
+@nav-tabs-vertical-bgcolor:                   white;
+@nav-tabs-vertical-color:                       @gray-darker;
+@nav-tabs-vertical-active-bg:                   @brand-primary;
+@nav-tabs-vertical-active-color:              white;
+
+
+// page tabs
+@page-tabs-horizontal-bg:                     white;
+@page-tabs-link-color:                          @gray-darker;
+@page-tabs-link-hover-color:                    @brand-primary;
+@page-tabs-active-link-border-color:            @brand-primary;
+
+
+//=====================================
+//NAVBARS
+//=====================================
+@navbar-default-color:                          @gray-darker;
+@navbar-default-bg:                             transparent;
+@navbar-default-border:                         fade(black, 3%);
+// Navbar links
+@navbar-default-link-color:                     @gray-darker;
+@navbar-default-link-hover-color:               @link-color;
+@navbar-default-link-hover-bg:                  transparent;
+@navbar-default-link-active-color:              @gray-darker;
+@navbar-default-link-active-bg:                 darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:            fade(@navbar-default-link-color, 50%);
+@navbar-default-link-disabled-bg:               transparent;
+// Navbar brand label
+@navbar-default-brand-color:                    @navbar-default-link-color;
+@navbar-default-brand-hover-color:              darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:                 transparent;
+// Navbar toggle
+@navbar-default-toggle-hover-bg:                transparent;
+@navbar-default-toggle-icon-bar-bg:             @navbar-default-color;
+@navbar-default-toggle-border-color:            transparent;
+
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+@navbar-inverse-color:                          lighten(@gray-light, 15%);
+@navbar-inverse-bg:                             @gray-darker;
+@navbar-inverse-border:                         darken(@navbar-inverse-bg, 10%);
+// Inverted navbar links
+@navbar-inverse-link-color:                     lighten(@gray-light, 15%);
+@navbar-inverse-link-hover-color:               lighten(@navbar-inverse-link-color, 15%);
+@navbar-inverse-link-hover-bg:                  transparent;
+@navbar-inverse-link-active-color:              @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:                 darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color:            fade(@navbar-inverse-link-color, 50%);
+@navbar-inverse-link-disabled-bg:               transparent;
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                    @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:              @navbar-inverse-link-hover-color;
+@navbar-inverse-brand-hover-bg:                 transparent;
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:                @gray-text;
+@navbar-inverse-toggle-icon-bar-bg:           white;
+@navbar-inverse-toggle-border-color:            @gray-text;
+// nav-pills
+@nav-pills-active-link-hover-bg:                @component-active-bg;
+@nav-pills-active-link-hover-color:             @component-active-color;
+
+// c8y-nav-stacked
+@nav-stacked-active-bg:                         @brand-primary-light;
+@nav-stacked-active-color:                      white;
+
+
+
+
+//=====================================
+//PAGINATION
+//=====================================
+@pagination-color:                              @link-color;
+@pagination-bg:                               white;
+@pagination-border:                             @gray-light;
+
+@pagination-hover-color:                        @link-hover-color;
+@pagination-hover-bg:                           @gray-lighter;
+@pagination-hover-border:                       @gray-light;
+
+@pagination-active-color:                     white;
+@pagination-active-bg:                          @brand-primary;
+@pagination-active-border:                      @brand-primary;
+
+@pagination-disabled-color:                     @gray-light;
+@pagination-disabled-bg:                      white;
+@pagination-disabled-border:                    @gray-light;
+
+
+@pager-bg:                                      @pagination-bg;
+@pager-border:                                  @pagination-border;
+         
+@pager-hover-bg:                                @pagination-hover-bg;
+         
+@pager-active-bg:                               @pagination-active-bg;
+@pager-active-color:                            @pagination-active-color;
+         
+@pager-disabled-color:                          @pagination-disabled-color;
+
+
+
+//=====================================
+//PANELS
+//=====================================
+@panel-border-color:                            @component-border-color;
+
+//** Border color for elements within panels
+@panel-inner-border:                            @component-border-color;
+@panel-footer-bg:                             white;
+
+@panel-default-text:                            @gray-text;
+@panel-default-border:                          @component-border-color;
+@panel-default-heading-bg:                      transparent;
+
+@panel-primary-text:                          white;
+@panel-primary-border:                          @brand-primary;
+@panel-primary-heading-bg:                      @brand-primary;
+
+@panel-success-text:                            @state-success-text;
+@panel-success-border:                          @state-success-border;
+@panel-success-heading-bg:                      @state-success-bg;
+
+@panel-info-text:                               @state-info-text;
+@panel-info-border:                             @state-info-border;
+@panel-info-heading-bg:                         @state-info-bg;
+
+@panel-warning-text:                            @state-warning-text;
+@panel-warning-border:                          @state-warning-border;
+@panel-warning-heading-bg:                      @state-warning-bg;
+
+@panel-danger-text:                             @state-danger-text;
+@panel-danger-border:                           @state-danger-border;
+@panel-danger-heading-bg:                       @state-danger-bg;
+
+//=====================================
+//WELLS
+//=====================================
+@well-bg:                                       @gray-white;
+@well-border:                                   darken(@well-bg, 7%);
+
+
+//=====================================
+//POPOVER
+//=====================================
+//** Popover body background color
+@popover-bg:                                  white;
+//** Popover border color
+@popover-border-color:                          @component-border-color;
+//** Popover fallback border color
+@popover-fallback-border-color:                 @component-border-color;
+//** Popover title background color
+@popover-title-bg:                            white;
+//** Popover outer arrow color
+@popover-arrow-outer-color:                     fadein(@popover-border-color, 5%);
+//** Popover outer arrow fallback color
+@popover-arrow-outer-fallback-color:            darken(@popover-fallback-border-color, 20%);
+//** Popover arrow color
+@popover-arrow-color:                           @popover-bg;
+
+//=====================================
+//PROGRESS BARS
+//=====================================
+//** Background color of the whole progress component
+@progress-bg:                                   fade(black, 5%);
+//** Progress bar text color
+@progress-bar-color:                          white;
+//** Default progress bar color
+@progress-bar-bg:                               @brand-primary;
+//** Success progress bar color
+@progress-bar-success-bg:                       @brand-success;
+//** Warning progress bar color
+@progress-bar-warning-bg:                       @brand-warning;
+//** Danger progress bar color
+@progress-bar-danger-bg:                        @brand-danger;
+//** Info progress bar color
+@progress-bar-info-bg:                          @brand-info;
+
+
+
+//=====================================
+//QUICK LINKS
+//=====================================
+// Add user
+@quickLinkColorA:                               tint(@brand-complementary, 25%);
+// Add device link                               / Add asset link
+@quickLinkColorB:                               tint(@brand-primary, 25%);
+// Device link                              
+@quickLinkColorC:                               tint(@brand-complementary, 25%);
+// Device manageme                              nt
+@quickLinkColorD:                               tint(@brand-primary, 25%);
+// Cockpit                              
+@quickLinkColorE:                               tint(@brand-complementary, 25%);
+// Help & Service                             
+@quickLinkColorF:                               tint(@brand-primary, 25%);
+//Change the following if you want the quick-links change color on hover
+@quickLinkHoverColorChange:                     false;
+//Add the following if the above rule is set to true
+@quickLinkHoverColor:                         #000;
+
+
+
+
+
+//=====================================
+//TOOLTIP
+//=====================================
+//** Tooltip text color
+@tooltip-color:                               white;
+//** Tooltip background color
+@tooltip-bg:                                    @gray-darker;
+
+
+
+//=====================================
+//TYPOGRAPHY
+//=====================================
+//** Global text color on `<body>`.
+@text-color:                                    @gray-text;
+
+@text-muted:                                    @gray;
+
+//** Global textual link color.
+@link-color:                                    @brand-primary;
+
+//** Link hover color set via `darken()` function.
+@link-hover-color:                              darken(@link-color, 15%);
+
+//** Abbreviations and acronyms border color
+@abbr-border-color:                             @gray-light;
+//** Headings small color
+@headings-small-color:                          @gray;
+//** Blockquote small color
+@blockquote-small-color:                        @gray;
+
+
+
+
+
+//=====================================
+//Tables
+//=====================================
+@table-bg-hover:                                 fade(@gray, 5%);
+@table-bg-bright-hover:                         @gray-white;
+@table-header-color:                            @gray-medium-dark;
+@table-caption-color:                           @gray-medium-dark;
+//** Default background color used for all tables.
+@table-bg:                                      transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent:                               @gray-white;
+//** Background color used for `.table-hover`.
+@table-bg-active:                               @table-bg-hover;
+//** Border color for table and cell borders.
+@table-border-color:                            fade(@table-header-color, 10%);
+@table-header-border-color:                     fade(@table-header-color, 10%);
+
+
+
+//=====================================
+//SVG COLORS
+//=====================================
+// colors for icon colors
+@svg-color-0:                                   @icon-dark-color-light;//used for the light color on c8y-icon-duocolor
+@svg-color-1:                                   @icon-dark-color-dark;
+@svg-color-2:                                   darken(@brand-complementary, 20%);
+@svg-color-3:                                   @gray-medium;
+@svg-color-4:                                   @gray-medium-dark;
+@svg-color-5:                                   @brand-info;
+@svg-color-6:                                   @dark-warning;
+@svg-color-7:                                   @dark-danger;
+@svg-color-8:                                   @gray;
+@svg-color-9:                                   @gray-white;//used for the dark color on c8y-icon-white
+
+@data-explorer-bg:                              inherit;
+@data-explorer-color:                           inherit;

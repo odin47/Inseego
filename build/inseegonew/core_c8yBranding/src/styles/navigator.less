@@ -1,0 +1,356 @@
+// mixin to check is there's a logo to navigator's title
+.checkLogo(@checkLogo) when not (@checkLogo = "") {
+  .path(@checkLogo);
+  .background-if-not-extending(@path);
+  padding-top: @appLogo-height;
+  padding-bottom: 0;
+  //overflow: hidden;
+  background-size: 100%;
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: auto;
+  z-index: 100;
+  line-height: 2.85;
+  .c8y-icon,
+  .app-noicon {
+    display: none!important;
+  }
+  span {
+    display: block;
+  }
+  br {
+    display: none;
+  }
+}
+
+// change the logo according to the lightness of the navigator background
+.checkLightness(@color) when (lightness(@color) <=50%) {
+  .c8y-icon-white();
+}
+
+//check navigator active background-color based on lightness of color
+.checkNavLightness(@color) when (lightness(@color) <= 49%){
+  background-color: fade(white, 10%);
+}
+//check navigator active background-color based on lightness of color
+.checkNavLightness(@color) when (lightness(@color) >= 50%){
+  background-color: fade(black, 10%);
+}
+
+// mixin to check is there's a logo to replace navigator's title
+.checkBranding(@checkLogo) when not (@checkLogo="") {
+  text-indent: -1000px;
+  overflow: hidden;
+  height: 0;
+  min-height: 0;
+}
+
+
+// mixin to check is there's a tenant logo
+.checkTenantLogo(@checkLogo) when not (@checkLogo="") {
+    .path(@checkLogo);
+    display: block;
+    .background-if-not-extending(@path);
+    padding-bottom: @navigator-platform-logo-height;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto @margin-md;
+    min-width: 200px;
+}
+
+// mixin to ajust navigatorContent top position when using a logo
+.adjustOnTopLogo(@checkLogo; @tenantLogo) when not(@checkLogo="") {
+  top: @navigator-title-height + (@navigatorWidth * (@appLogo-height/100));
+}
+.adjustOnTopLogo(@checkLogo; @tenantLogo) when (@checkLogo="") and not(@tenantLogo="") {
+  top: @margin-base * 14 + @navigator-platform-logo-height;
+}
+
+.adjustHeaderHeight(@checkLogo) when not(@checkLogo="") {
+  top: (@navigatorWidth * (@appLogo-height/100));
+}
+
+// mixin to apply gradient in navigator
+.checkVerticalGradient(@color1; @color2) when not (@color1 = "") {
+  #gradient>.vertical(@start-color: @color1;
+  @end-color: @color2);
+}
+
+// mixin to apply gradient in navigator
+.checkHorizontalGradient(@color1; @color2) when not (@color1="") {
+  #gradient>.horizontal(@start-color: @color1;
+  @end-color: @color2);
+}
+
+
+/* Navigator */
+
+.navigator {
+  position: fixed;
+  z-index: (@zindex-navbar-fixed + 1);
+  top: 0;
+  bottom: 0;
+  left: -(@navigatorWidth + 10);
+  width: @navigatorWidth;
+  padding-top: @navigator-top-padding;
+  padding-bottom: @navigator-padding-bottom;
+  color: @navigator-text-color;
+  background: @navColor;
+  font-family: @navigator-font-family;
+  .transition(left @open-menu-time-type);
+  .checkVerticalGradient(@grad-top; @grad-bottom);
+
+  &.open {
+    left: 0;
+    .boxShadowHelper(3, right); //box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    @media (min-width: @grid-float-breakpoint) {
+      box-shadow: none;
+    }
+  }
+  &.minheight {
+    height: @headerHeight;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.navigator .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: @margin-md 0;
+  min-height: @margin-base * 14;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  color: @navigator-title-color;
+  background-color: @navColorHeader;
+  &:after{
+    position: absolute;
+    top: @margin-base * 14;
+    left: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: @navColorHeader;
+    .adjustOnTopLogo(@appLogo, @navigator-platform-logo);
+    .shadow-scroll();
+  }
+  .c8y-icon+span,
+  .app-noicon+span {
+    display: block;
+  }
+  .c8y-icon {
+    font-size: 280%;
+    margin-bottom: @margin-base;
+    .checkLightness(@navColor);
+  }
+  .app-noicon {
+    width: @margin-base * 6;
+    height: @margin-base * 6;
+    line-height: @margin-base * 6;
+    background-color: white;
+    color: @gray-medium;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+  .tenant-brand{
+    .checkTenantLogo(@navigator-platform-logo);
+  }
+  .checkLogo(@appLogo);
+  .checkBranding(@appBranding);
+}
+
+
+// Navigator content
+.navigatorContent {
+  position: absolute;
+  top: @margin-base * 14;
+  right: 0;
+  bottom: @margin-base * 3;
+  left: 0;
+  overflow-y: auto;
+  margin: 4px 0 0 0;
+  padding: 4px 0 0 0;
+  list-style: none;
+  .adjustOnTopLogo(@appLogo, @navigator-platform-logo);
+  .adjustHeaderHeight(@appBranding);
+  &:before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    height: 4px;
+    background-color:@navColor;
+    content: '';
+  }
+  .expander{
+    margin-left:auto;
+    transition: transform .25s ease;
+    font-size: 10px;
+    width: 24px;
+    line-height: 30px;
+    margin: -10px -20px -10px auto;
+  }
+
+  .link {
+    font-size: @navigator-font-size;
+    position: relative;
+    transition: background .35s ease;
+    display: flex;
+    flex-flow: row nowrap;
+    text-decoration: none;
+    color: @navigator-text-color;
+    align-items: center;
+    border-left: @navigator-active-border-width solid transparent;
+    padding: (@margin-sm + 1) @margin-lg (@margin-sm + 1) @margin-md;
+    outline: none;
+    min-height: @margin-base * 5;
+    > span{
+      .text-truncate();
+    }
+    &.active{
+      color: @navigator-active-color;
+      background-color: @navigator-active-bg;
+      border-left-color: @body-background-color;
+      +.children.in{
+        background-color: fade(@navigator-active-bg, 50%);
+      }
+    }
+    &.open{
+      .expander{
+        .rotate(180deg);
+      }
+
+    }
+    &.open.active{
+      .shadow-border( 1px; rgba(0,0,0,.1));
+    }
+    &.parent.open:not(.active) {
+      //background-color: darken(@navColor, 5%);
+      .shadow-border( 1px; @navigator-separator-color);
+      ~ .children{
+        //background-color: fade(black, 5%);
+        .shadow-border( -1px; @navigator-separator-color);
+      }
+    }
+    .icon{
+      font-size: @navigator-font-size + 6;
+    }
+    &.root-link{
+      font-size: @margin-md;
+      padding: @margin-sm @margin-lg @margin-sm @margin-md;
+      .icon{
+        font-size: @navigator-font-size + @margin-base + 2;
+      }
+    }
+
+  }
+  .children{
+    transition: all .35s ease;
+    .link{
+      padding-left: @margin-md + @margin-md;
+    }
+    .children{
+      .link{
+        padding-left: @margin-md + @margin-md + @margin-base;
+      }
+      .children{
+        .link{
+          padding-left: @margin-md + @margin-md + (@margin-base * 2) ;
+        }
+        .children{
+          .link{
+            padding-left: @margin-md + @margin-md + (@margin-base * 3) ;
+          }
+          .children{
+            .link{
+              padding-left: @margin-md + @margin-md + (@margin-base * 4) ;
+            }
+            .children{
+              .link{
+                padding-left: @margin-md + @margin-md + (@margin-base * 5) ;
+              }
+              .children{
+                .link{
+                  padding-left: @margin-md + @margin-md + (@margin-base * 6) ;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slot {
+    position: relative;
+    .loadingIndicator {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin-top: -8px;
+      opacity: 0.3;
+    }
+    c8y-device-status-display{
+      height: @margin-md;
+    }
+    .statusContainer {
+      font-size: 14px;
+      margin-right: @margin-md;
+      overflow: hidden;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: white;
+      padding: 3px 0;
+      transform: scale(.8);
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    margin-right: @margin-md;
+    text-align: center;
+  }
+  .empty,
+  .showMore {
+    font-size: 0.93em;
+    opacity: 0.6;
+    font-style: italic;
+  }
+  .link.empty:hover {
+    background-color: transparent;
+    opacity: 0.8;
+  }
+}
+
+.powered-by {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  background: @navColor;
+  p {
+    margin: 4px;
+    height: 15px;
+    text-align: center;
+    color: fadeout(contrast(@navColor), 70%);
+  }
+}
+/* end Navigator */

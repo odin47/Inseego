@@ -1,0 +1,28 @@
+// Contextual backgrounds
+.checkContrast(@color) when (lightness(@color) < 50%) {
+  color: white;
+}
+.checkContrast(@color) when (lightness(@color) >= 50%) {
+  color: @gray-text;
+}
+
+
+.bg-variant(@color) {
+  background-color: @color!important;
+  .checkContrast(@color);
+  a&:hover,
+  a&:focus {
+    background-color: darken(@color, 10%)!important;
+  }
+  &.separator{
+    border-top: 1px solid fade(black, 5%);
+  }
+  >a {
+    color: inherit;
+    text-decoration: underline;
+    .fa,
+    .c8y-icon {
+      text-decoration: none;
+    }
+  }
+}

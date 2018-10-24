@@ -1,0 +1,1 @@
+{"description":"Home plugin","ngModules":["inseego.home"],"js":["main.js"],"imports":[],"css":[],"version":"1.0.0","compatibility":{"app":"inseegonew","contextPath":"homePlugin","rootContextPath":"inseegonew/homePlugin"},"contextPath":"inseegonew_homePlugin"}

@@ -1,0 +1,21 @@
+{
+  "name": "InseegoNew",
+  "availability": "PRIVATE",
+  "contextPath": "inseegonew",
+  "key": "inseego-new-appkey",
+  "resourcesUrl": "/",
+  "type": "HOSTED",
+  "tabsHorizontal": true,
+  "imports": [
+    "core/dashboard2",
+    "core/c8yBranding",
+    "core/groupsHierarchy",
+    "core/alarms",
+    "core/map",
+    "core/dataPointTable",
+    "inseegonew/widgets",
+    "inseegonew/homePlugin",
+    "inseegonew/groupDashboardPlugin"
+    
+  ]
+}

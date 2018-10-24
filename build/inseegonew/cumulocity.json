@@ -1,0 +1,1 @@
+{"name":"InseegoNew","availability":"PRIVATE","contextPath":"inseegonew","key":"inseego-new-appkey","tabsHorizontal":true,"imports":["core","c8ydata","core_dashboard2","core_htmlWidget","core_c8yBranding"],"_webpaas":true}

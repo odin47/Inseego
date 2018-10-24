@@ -1,0 +1,34 @@
+{
+    "description": "Widgets",
+    "ngModules": [
+      "inseego.widgets"
+    ],
+    "js": [
+     "widgets.module.js",
+     
+     "deviceDataTableWidget/widget.config.js",
+     "deviceDataTableWidget/widget.factory.js",
+     "deviceDataTableWidget/widget.service.js",
+     "deviceDataTableWidget/widget.component.js",
+
+     "map/widget.config.js",
+     "map/widget.component.js",
+
+     "alarms/widget.config.js",
+     "alarms/widget.component.js",
+     
+     "node_modules/angular-smart-table/dist/smart-table.min.js",
+     "node_modules/angular/angular.min.js",
+     "node_modules/angular-animate/angular-animate.js",
+     "node_modules/angular-aria/angular-aria.min.js",
+     "node_modules/angular-material/angular-material.min.js"
+    ],
+    "imports": [
+    ],
+    "css": [
+      "deviceDataTableWidget/widget.css",
+      "node_modules/angular-material/angular-material.min.css"
+    ],
+    "copy": []
+  }
+  

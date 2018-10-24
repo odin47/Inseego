@@ -1,0 +1,20 @@
+{
+  "name": "inseegonew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-animate": "^1.7.5",
+    "angular-aria": "^1.7.5",
+    "angular-material": "^1.1.10",
+    "angular-smart-table": "^2.1.11",
+    "cumulocity-ui-build": "^9.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepak Podili Devendra",
+  "license": "ISC"
+}

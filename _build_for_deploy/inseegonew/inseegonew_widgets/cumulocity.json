@@ -1,0 +1,1 @@
+{"description":"Widgets","ngModules":["inseego.widgets"],"js":["main.js"],"imports":[],"css":["style.css"],"version":"1.0.0","compatibility":{"app":"inseegonew","contextPath":"widgets","rootContextPath":"inseegonew/widgets"},"contextPath":"inseegonew_widgets"}

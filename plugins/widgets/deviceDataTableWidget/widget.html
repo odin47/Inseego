@@ -1,0 +1,133 @@
+<div ng-cloak>
+	<md-content>
+	  <md-tabs md-dynamic-height md-border-bottom>
+		<md-tab label="Devices Online: {{vm.availableCount}}">
+		  <md-content class="md-padding">
+			<h2>Device Data Table</h2>
+			<div>
+<table st-table="rowCollection" class="table table-striped" id="dataExportTableAvailable">
+	<thead>
+	<tr>
+		<th><input type="checkbox" ng-model="allOnline"><span class="selectAll">Select</span></th>
+		<th>IMEI</th>
+		<th>SIM ID</th>
+		<th>Name</th>
+		<th>PTN</th>
+		<th>IPV4</th>
+		<th>IPV6</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="device in vm.deviceCollectionAvailable">
+		<td><input type="checkbox" ng-checked="allOnline"></td>
+		<td>{{device.imei}}</td>
+		<td>{{device.sim_id}}</td>
+		<td>{{device.name}}</td>
+		<td>{{device.ptn}}</td>
+		<td>{{device.ipv4}}</td>
+		<td>{{device.ipv6}}</td>
+	</tr>
+	</tbody>
+</table>
+<div>
+<div class="button-container">
+	<md-button class="md-raised md-primary">Edit</md-button>
+	<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableAvailable')">Export</md-button>
+</div>
+		  </md-content>
+		</md-tab>
+		<md-tab label="Devices Offline:{{vm.unAvailableCount}}">
+		  <md-content class="md-padding">
+				<h2>Device Data Table</h2>
+				<table st-table="rowCollection" class="table table-striped" id="dataExportTableUnAvailable">
+					<thead>
+					<tr>
+						<th><input type="checkbox" ng-model="allOffline"><span class="selectAll">Select</span></th>
+						<th>IMEI</th>
+						<th>SIM ID</th>
+						<th>Name</th>
+						<th>PTN</th>
+						<th>IPV4</th>
+						<th>IPV6</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="device in vm.deviceCollectionUnavailable">
+						<td><input type="checkbox"  ng-checked="allOffline"></td>
+						<td>{{device.imei}}</td>
+						<td>{{device.sim_id}}</td>
+						<td>{{device.name}}</td>
+						<td>{{device.ptn}}</td>
+						<td>{{device.ipv4}}</td>
+						<td>{{device.ipv6}}</td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="button-container">
+					<md-button class="md-raised md-primary">Edit</md-button>
+					<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableUnAvailable')">Export</md-button>
+				</div>
+					  </md-content>
+		</md-tab>
+		<md-tab label="Pending Registration: {{vm.pendingCount}}">
+		  <md-content class="md-padding">
+				<h2>Device Data Table</h2>
+				<table st-table="rowCollection" class="table table-striped" id="dataExportTablePending">
+					<thead>
+					<tr>
+						<th><input type="checkbox" ng-model="allPending"><span class="selectAll">Select</span></th>
+						<th>ID</th>
+						<th>OWNER</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="device in vm.pendingCollection">
+						<td><input type="checkbox" ng-checked="allPending"></td>
+						<td>{{device.id}}</td>
+						<td>{{device.owner}}</td>						
+					</tr>
+					</tbody>
+				</table>
+				<div class="button-container">
+					<md-button class="md-raised md-primary">Edit</md-button>
+					<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTablePending')">Export</md-button>
+				</div>
+			</md-content>
+		</md-tab>
+		<md-tab label="Alarms: {{vm.alarmsCount}}">
+			<md-content class="md-padding">
+					<h2>Device Data Table</h2>
+					<table st-table="rowCollection" class="table table-striped" id="dataExportTableAlarms">
+						<thead>
+						<tr>
+							<th><input type="checkbox" ng-model="allAlarms"><span class="selectAll">Select</span></th>
+							<th>IMEI</th>
+							<th>SIM ID</th>
+							<th>Name</th>
+							<th>PTN</th>
+							<th>IPV4</th>
+							<th>IPV6</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="deviceAlarm in vm.deviceCollectionAlarms">
+							<td><input type="checkbox" ng-checked="allAlarms"></td>
+							<td>{{deviceAlarm.imei}}</td>
+							<td>{{deviceAlarm.sim_id}}</td>
+							<td>{{deviceAlarm.name}}</td>
+							<td>{{deviceAlarm.ptn}}</td>
+							<td>{{deviceAlarm.ipv4}}</td>
+							<td>{{deviceAlarm.ipv6}}</td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="button-container">
+						<md-button class="md-raised md-primary">Edit</md-button>
+						<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableAlarms')">Export</md-button>
+					</div>
+			  </md-content>
+		  </md-tab>
+	  </md-tabs>
+	</md-content>
+  </div>
+  

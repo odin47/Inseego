@@ -1,0 +1,15 @@
+{
+  "description": "Home plugin",
+  "ngModules": [
+    "inseego.home"
+  ],
+  "js": [
+    "home.module.js",
+    "constants.js",
+    "home.config.js",
+    "home.component.js"   
+  ],
+  "imports": [],
+  "css": [],
+  "copy": []
+}

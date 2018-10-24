@@ -1,0 +1,86 @@
+//=======================================
+// Scaffolding
+//---------------------------------------
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               @body-background-color;
+
+@body-background-pattern: "";
+
+
+// mcontainer
+@mcontainer-bg-color:@body-bg;
+
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+// realtime Colors
+@realtimeEnd:           whitesmoke;
+
+@realtimeStart:         @gray;
+
+@realtimeOn:            @brand-success;
+
+@realtimeOff:           @dark-danger;
+
+
+
+
+// file paths
+@image-path: '';
+
+
+
+// sizing
+
+
+
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+@zindex-navbar:            1001;
+@zindex-dropdown:          1001;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-toolbar:           1030;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
+@zindex-alerts:            1080;
+@zindex-error-detail:      1090;
+
+// we use to levaage relativeUrl to import assets with webpack directly
+@use-relative-paths: false;
+@used-as-base: false;
+.path(@p) when (@use-relative-paths) {
+  @path: '../@{p}';
+}
+.path(@p) when not (@use-relative-paths) {
+  @path: @p;
+}
+.path(@p, @base) when (@use-relative-paths) {
+  @path: '../@{base}@{p}';
+}
+.path(@p, @base) when not(@use-relative-paths) {
+  @path: '@{base}@{p}';
+}
+.background-if-not-extending(@bg) when not(@extending) {
+  background-image: url(@bg);
+}
+
+// check if this is being extended by another branding
+@extending: false;
+
+@logo-login: e('.mainlogo');
+@logo-navigator: e('.navigator .title .tenant-brand');
+
+@font-path: 'font/'; // NOT USED, just to prevent eventuall errors of undefined vars
+

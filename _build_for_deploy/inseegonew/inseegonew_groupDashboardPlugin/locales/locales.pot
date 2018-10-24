@@ -1,0 +1,9 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: inseegonew_groupDashboardPlugin/constants.js:18
+msgid "Location for All Devices"
+msgstr ""
