@@ -19,9 +19,14 @@
 
     
  /* @ngInject */
- function Controller(c8yTitle, homeConstants) {
+ function Controller(c8yTitle, homeConstants, $scope) {
 
    const vm = this;
+
+   $scope.$on('deviceDataTableEvent', function(event, data){
+    // do what you want with the data from the event
+     $scope.$broadcast('mapEvent', {message: data.message});
+})
    
   vm.$onChanges = function(section, type) {
     if (section && vm.section) {

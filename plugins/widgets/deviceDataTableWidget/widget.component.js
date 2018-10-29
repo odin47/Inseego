@@ -32,13 +32,18 @@
 
         getDeviceStatus();
         getDeviceRegistration();
+        $scope.$emit('superCoolEvent', {message: 'HI'});
+
+
+        $scope.sendEvent = function(status) {
+            $scope.$emit('deviceDataTableEvent', {message: status});
+        }
 
         function getDeviceStatus() {
             deviceDataService.getDevicesData().then(function(data) {
                 for (var i = 0; i < data.length; i++) {
                     //console.log(data[i]);
                     if (data[i].c8y_Hardware) {
-                         console.log(data[i]);
                         if (data[i].c8y_Availability.status === 'UNAVAILABLE') {
                             
                             if(data[i].c8y_Hardware.imei && data[i].c8y_Hardware.ptn && data[i].name) {
@@ -51,7 +56,6 @@
                                     ipv4: data[i].c8y_Mobile.ipaddress4,
                                     ipv6: data[i].c8y_Mobile.ipaddress6
                                 });
-                                console.log(data[i].c8y_Mobile.imei);
                               
                             }
                           
@@ -100,7 +104,6 @@
                         owner: data[i].owner
                     });
                 }
-                console.log('Registered DEVICES' + data);
             });
         }
 

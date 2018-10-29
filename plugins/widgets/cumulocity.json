@@ -11,8 +11,8 @@
      "deviceDataTableWidget/widget.service.js",
      "deviceDataTableWidget/widget.component.js",
 
-     "map/widget.config.js",
-     "map/widget.component.js",
+     "customMap/widget.config.js",
+     "customMap/widget.component.js",
 
      "alarms/widget.config.js",
      "alarms/widget.component.js",

@@ -21,6 +21,7 @@
       gettextCatalog
     ) {
       var vm = this;
+      vm.device.id = 60234;
   
       vm.$onInit = onInit;
   

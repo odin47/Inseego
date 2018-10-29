@@ -1,7 +1,7 @@
 <div ng-cloak>
 	<md-content>
 	  <md-tabs md-dynamic-height md-border-bottom>
-		<md-tab label="Devices Online: {{vm.availableCount}}">
+		<md-tab label="Devices Online: {{vm.availableCount}}" ng-click="sendEvent('AVAILABLE')">
 		  <md-content class="md-padding">
 			<h2>Device Data Table</h2>
 			<div>
@@ -36,7 +36,7 @@
 </div>
 		  </md-content>
 		</md-tab>
-		<md-tab label="Devices Offline:{{vm.unAvailableCount}}">
+		<md-tab label="Devices Offline:{{vm.unAvailableCount}}" ng-click="sendEvent('UNAVAILABLE')">
 		  <md-content class="md-padding">
 				<h2>Device Data Table</h2>
 				<table st-table="rowCollection" class="table table-striped" id="dataExportTableUnAvailable">
@@ -69,7 +69,7 @@
 				</div>
 					  </md-content>
 		</md-tab>
-		<md-tab label="Pending Registration: {{vm.pendingCount}}">
+		<md-tab label="Pending Registration: {{vm.pendingCount}}" ng-click="sendEvent('PENDING')">
 		  <md-content class="md-padding">
 				<h2>Device Data Table</h2>
 				<table st-table="rowCollection" class="table table-striped" id="dataExportTablePending">
@@ -94,7 +94,7 @@
 				</div>
 			</md-content>
 		</md-tab>
-		<md-tab label="Alarms: {{vm.alarmsCount}}">
+		<md-tab label="Alarms: {{vm.alarmsCount}}" ng-click="sendEvent('ALARMS')">
 			<md-content class="md-padding">
 					<h2>Device Data Table</h2>
 					<table st-table="rowCollection" class="table table-striped" id="dataExportTableAlarms">
