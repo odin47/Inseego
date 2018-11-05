@@ -20,6 +20,7 @@
             getDeviceRegistration : function() {
                 return c8yDeviceRegistration.list();
             }
+
         };
 
         

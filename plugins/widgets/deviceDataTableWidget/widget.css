@@ -35,3 +35,26 @@
 .selectAll {
     margin-left: 10px;
 }
+
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color: #ffffff;
+    background: grey;
+}
+
+md-tabs.md-default-theme .md-tab, md-tabs .md-tab:nth-child(2){
+     color: green;
+}
+
+md-tabs.md-default-theme .md-tab, md-tabs .md-tab:nth-child(3){
+    color: red;
+}
+
+.md-whiteframe-1dp, .md-whiteframe-z1 {
+    box-shadow: none !important;
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+    background-color: rgba(64, 86, 255, 0.87);
+}
+
+

@@ -1,7 +1,0 @@
-{
-  "name": "@c8y/style",
-  "version": "0.0.3",
-  "dependencies": {
-    "font-awesome": "4.7.0"
-  }
-}

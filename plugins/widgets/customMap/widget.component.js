@@ -136,17 +136,22 @@
     }
 
     function placeDevice(device, uri) {
-      var pos = device.c8y_Position;
-      var marker = {
-        lat: pos.lat,
-        lng: pos.lng,
-        message: '<a href="#/device/' + device.id + '">' + device.name + '</a>',
-      };
-
-      if (uri) {
-        marker.icon = { iconUrl: uri };
+      if(device.c8y_Position) {
+        var pos = device.c8y_Position;
+        var marker = {
+          lat: pos.lat,
+          lng: pos.lng,
+         // message: '<a href="#/device/' + device.id + '">' + device.name + '</a>',
+         message:'<b>IMEI: </b>'+device.c8y_Hardware.imei+'</br><b>Longitude: </b>'+device.c8y_Position.lng+'</br><b>Latitude: </b>'+device.c8y_Position.lat+
+         '</br><b>Last Transmission (Last GPS Update): </b>'+device.lastUpdated,
+        };
+  
+        if (uri) {
+          marker.icon = { iconUrl: uri };
+        }
+        vm.markers.push(marker);
       }
-      vm.markers.push(marker);
+   
     }
   }
 }());

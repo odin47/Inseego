@@ -128,13 +128,24 @@
     <div class="ng-cloak" id="app" c8y-main-app></div>
     <script>(function(){var b=document.getElementById('assetProgressBar');b && (b.className = b.className.replace(/hidden/,''));b=document.querySelectorAll('#assetProgressBar >.progress-bar')[0];if (b) {b._w=1;window.updateProgress=setInterval(function(){ b.style.width=b._w + '%'; b._w += 5;},300);}})();window.trybootstrap=function (){if(window.bootstrap){window.bootstrap(); window.bootstrap=angular.noop;}else{setTimeout(window.trybootstrap, 300)}}</script>
     <script>!function(a){"use strict";var b=function(b,c,d){function j(a){return e.body?a():void setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);</script>
-    <script>C8Y_NG_MODULES=["c8y.ui","c8y.parts.dashboard2","c8y.parts.htmlwidget"];C8Y_APP={"langs":["de","en","es","fr","ja_JP"],"nodebug":1,"core_path":"core/","data_path":"c8ydata"};C8Y_APP.C8Y_INSTANCE_OPTIONS={"tabsHorizontal":true};C8Y_APP.modules=C8Y_NG_MODULES;delete window.C8Y_NG_MODULES;</script>
-    <!--MODULES_CSS_DEFER--><script>["core/style.css","core_dashboard2/style.css","core_htmlWidget/style.css"].forEach(function(f){loadCSS(f)})</script><!--/MODULES_CSS_DEFER-->
+    <script>C8Y_NG_MODULES=["c8y.ui","c8y.parts.dashboard2","c8y.groupsHierarchy","c8y.deviceSelector","c8y.aclManagement","c8y.parts.aclManagement","c8y.alarms","c8y.cockpit.map","c8y.cockpit.dataPointTable","c8y.core.measurements2","c8y.cockpit.dataPointExplorer","inseego.widgets","inseego.home","inseego.groupdashboard"];C8Y_APP={"langs":["de","en","es","fr","ja_JP"],"nodebug":1,"core_path":"core/","data_path":"c8ydata"};C8Y_APP.C8Y_INSTANCE_OPTIONS={"tabsHorizontal":true};C8Y_APP.modules=C8Y_NG_MODULES;delete window.C8Y_NG_MODULES;</script>
+    <!--MODULES_CSS_DEFER--><script>["core/style.css","core_dashboard2/style.css","core_groupsHierarchy/style.css","core_deviceSelector/style.css","core_alarms/style.css","core_map/style.css","core_measurements/style.css","core_dataPointExplorer/style.css","inseegonew_widgets/style.css"].forEach(function(f){loadCSS(f)})</script><!--/MODULES_CSS_DEFER-->
     <!--MODULES_JS-->
     <script defer src="core/main.js"></script>
     <script defer src="c8ydata/main.js"></script>
     <script defer src="core_dashboard2/main.js"></script>
-    <script defer src="core_htmlWidget/main.js"></script>
+    <script defer src="core_groupsHierarchy/main.js"></script>
+    <script defer src="core_deviceSelector/main.js"></script>
+    <script defer src="devicemanagement_aclManagement/main.js"></script>
+    <script defer src="core_aclManagement/main.js"></script>
+    <script defer src="core_alarms/main.js"></script>
+    <script defer src="core_map/main.js"></script>
+    <script defer src="core_dataPointTable/main.js"></script>
+    <script defer src="core_measurements/main.js"></script>
+    <script defer src="core_dataPointExplorer/main.js"></script>
+    <script defer src="inseegonew_widgets/main.js"></script>
+    <script defer src="inseegonew_homePlugin/main.js"></script>
+    <script defer src="inseegonew_groupDashboardPlugin/main.js"></script>
     <!--/MODULES_JS-->
     <script defer src="data:application/javascript,window.trybootstrap()"></script></body>
 </html>

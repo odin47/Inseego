@@ -1,70 +1,255 @@
 <div ng-cloak>
 	<md-content>
-	  <md-tabs md-dynamic-height md-border-bottom>
-		<md-tab label="Devices Online: {{vm.availableCount}}" ng-click="sendEvent('AVAILABLE')">
+	  <md-tabs md-dynamic-height md-border-bottom md-selected=0>
+			<md-tab label="All Devices" ng-click="sendEvent('AVAILABLE')" md-selected="true">
+					<md-content class="md-padding">
+					  <div>
+		  <mdt-table id="dataExportTableAll"
+		   table-card="{visible: true, title: 'Device Data Table', columnSelector: true}"		   			   
+					   alternate-headers="'contextual'"
+					   selectable-rows="true"
+					   paginated-rows="{isEnabled: true, rowsPerPageValues: [4,10,20,50]}"
+					   selected-row-callback="selectedRowCallback(rows)"
+					   mdt-row="{
+								data:  vm.deviceCollectionAll,
+								'table-row-id-key': 'id',
+								'column-keys': [
+									'status',
+									'last_message',
+									'imei',
+									'device_type',
+									'device_name',
+									'carrier',
+									'sim_no',
+									'ptn',
+									'ipv4_address',
+									'ipv6_address',
+									'model',
+									'ethernet_1_clients',
+									'linux_version',
+									'modem_firmware_version',
+									'radio_access_technology',
+									'rsrp',
+									'rsrq',
+									'rssi',
+									'sinr',
+									'wifi_1_clients',
+									'pri_version',
+									'apn',
+									'battery_per',
+									'data_used',
+									'active_input',
+									'ec_io',
+									'usb_input',
+									'application_version',
+									'modem_temprature'
+								]
+								}">
+			  <mdt-header-row>
+				
+				<!-- exclude-from-column-selector="true" excludes the column name from the selectable list  -->
+				<mdt-column align-rule="left"  exclude-from-column-selector="true"><span>STATUS</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>Last Message</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>IMEI</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Type</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Name</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>Carrier</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>SIM #</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>PTN</span></mdt-column>
+				<mdt-column align-rule="right" exclude-from-column-selector="true"><span>IPV4 Address</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>IPV6 Address</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Model</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Ethernet 1 Clients</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Linux Version</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Firmware Version</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Radio Access Technology</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>RSRP</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>RSRQ</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>RSSI</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>SINR</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Wi-Fi 1 Clients</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>PRI Version</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>APN</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Battery %</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Data Used</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Active Input</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>EC/IO</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>USB Input</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Application Version</span></mdt-column>
+				<mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Temperature</span></mdt-column>
+			  </mdt-header-row>
+			</mdt-table>
+		  <div>
+		  <div class="button-container">
+			  <!-- <md-button class="md-raised md-primary">Edit</md-button> -->
+			  <md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableAll')">Export</md-button>
+		  </div>
+					</md-content>
+				  </md-tab>
+		<md-tab label="Devices Online: {{vm.availableCount}}"  ng-click="sendEvent('AVAILABLE')">
 		  <md-content class="md-padding">
-			<h2>Device Data Table</h2>
 			<div>
-<table st-table="rowCollection" class="table table-striped" id="dataExportTableAvailable">
-	<thead>
-	<tr>
-		<th><input type="checkbox" ng-model="allOnline"><span class="selectAll">Select</span></th>
-		<th>IMEI</th>
-		<th>SIM ID</th>
-		<th>Name</th>
-		<th>PTN</th>
-		<th>IPV4</th>
-		<th>IPV6</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr ng-repeat="device in vm.deviceCollectionAvailable">
-		<td><input type="checkbox" ng-checked="allOnline"></td>
-		<td>{{device.imei}}</td>
-		<td>{{device.sim_id}}</td>
-		<td>{{device.name}}</td>
-		<td>{{device.ptn}}</td>
-		<td>{{device.ipv4}}</td>
-		<td>{{device.ipv6}}</td>
-	</tr>
-	</tbody>
-</table>
+<mdt-table id="dataExportTableAvailable"
+ table-card="{visible: true, title: 'Device Data Table', columnSelector: true}"
+			 alternate-headers="'contextual'"
+			 selectable-rows="true"
+             paginated-rows="{isEnabled: true, rowsPerPageValues: [4,10,20,50]}"
+			 selected-row-callback="selectedRowCallback(rows)"
+             mdt-row="{
+                      data:  vm.deviceCollectionAvailable,
+                      'table-row-id-key': 'id',
+                      'column-keys': [
+                          'status',
+                          'last_message',
+                          'imei',
+                          'device_type',
+                          'device_name',
+                          'carrier',
+                          'sim_no',
+						  'ptn',
+						  'ipv4_address',
+						  'ipv6_address',
+						  'model',
+						  'ethernet_1_clients',
+						  'linux_version',
+						  'modem_firmware_version',
+						  'radio_access_technology',
+						  'rsrp',
+						  'rsrq',
+						  'rssi',
+						  'sinr',
+						  'wifi_1_clients',
+						  'pri_version',
+						  'apn',
+						  'battery_per',
+						  'data_used',
+						  'active_input',
+						  'ec_io',
+						  'usb_input',
+						  'application_version',
+						  'modem_temprature'
+                      ]
+                      }">
+    <mdt-header-row>
+      
+      <!-- exclude-from-column-selector="true" excludes the column name from the selectable list  -->
+      <mdt-column align-rule="left"  exclude-from-column-selector="true"><span>STATUS</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Last Message</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IMEI</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Type</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Name</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Carrier</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>SIM #</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>PTN</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IPV4 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>IPV6 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Model</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Ethernet 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Linux Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Firmware Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Radio Access Technology</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRP</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRQ</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSSI</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>SINR</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Wi-Fi 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>PRI Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>APN</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Battery %</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Data Used</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Active Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>EC/IO</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>USB Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Application Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Temperature</span></mdt-column>
+    </mdt-header-row>
+  </mdt-table>
 <div>
 <div class="button-container">
-	<md-button class="md-raised md-primary">Edit</md-button>
+	<!-- <md-button class="md-raised md-primary">Edit</md-button> -->
 	<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableAvailable')">Export</md-button>
 </div>
 		  </md-content>
 		</md-tab>
-		<md-tab label="Devices Offline:{{vm.unAvailableCount}}" ng-click="sendEvent('UNAVAILABLE')">
-		  <md-content class="md-padding">
-				<h2>Device Data Table</h2>
-				<table st-table="rowCollection" class="table table-striped" id="dataExportTableUnAvailable">
-					<thead>
-					<tr>
-						<th><input type="checkbox" ng-model="allOffline"><span class="selectAll">Select</span></th>
-						<th>IMEI</th>
-						<th>SIM ID</th>
-						<th>Name</th>
-						<th>PTN</th>
-						<th>IPV4</th>
-						<th>IPV6</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr ng-repeat="device in vm.deviceCollectionUnavailable">
-						<td><input type="checkbox"  ng-checked="allOffline"></td>
-						<td>{{device.imei}}</td>
-						<td>{{device.sim_id}}</td>
-						<td>{{device.name}}</td>
-						<td>{{device.ptn}}</td>
-						<td>{{device.ipv4}}</td>
-						<td>{{device.ipv6}}</td>
-					</tr>
-					</tbody>
-				</table>
+		<md-tab label="Devices Offline: {{vm.unAvailableCount}}" ng-click="sendEvent('UNAVAILABLE')">
+		  <md-content class="md-padding">				
+				<mdt-table id="dataExportTableUnAvailable"
+ table-card="{visible: true, title: 'Device Data Table', columnSelector: true}"
+			 alternate-headers="'contextual'"
+			 selectable-rows="true"
+             paginated-rows="{isEnabled: true, rowsPerPageValues: [4,10,20,50]}"
+			 selected-row-callback="selectedRowCallback(rows)"
+             mdt-row="{
+                      data:  vm.deviceCollectionUnavailable,
+                      'table-row-id-key': 'id',
+                      'column-keys': [
+                          'status',
+                          'last_message',
+                          'imei',
+                          'device_type',
+                          'device_name',
+                          'carrier',
+                          'sim_no',
+						  'ptn',
+						  'ipv4_address',
+						  'ipv6_address',
+						  'model',
+						  'ethernet_1_clients',
+						  'linux_version',
+						  'modem_firmware_version',
+						  'radio_access_technology',
+						  'rsrp',
+						  'rsrq',
+						  'rssi',
+						  'sinr',
+						  'wifi_1_clients',
+						  'pri_version',
+						  'apn',
+						  'battery_per',
+						  'data_used',
+						  'active_input',
+						  'ec_io',
+						  'usb_input',
+						  'application_version',
+						  'modem_temprature'
+                      ]
+                      }">
+    <mdt-header-row>
+      
+      <!-- exclude-from-column-selector="true" excludes the column name from the selectable list  -->
+      <mdt-column align-rule="left"  exclude-from-column-selector="true"><span>STATUS</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Last Message</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IMEI</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Type</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Name</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Carrier</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>SIM #</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>PTN</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IPV4 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>IPV6 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Model</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Ethernet 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Linux Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Firmware Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Radio Access Technology</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRP</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRQ</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSSI</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>SINR</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Wi-Fi 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>PRI Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>APN</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Battery %</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Data Used</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Active Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>EC/IO</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>USB Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Application Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Temperature</span></mdt-column>
+    </mdt-header-row>
+  </mdt-table>
 				<div class="button-container">
-					<md-button class="md-raised md-primary">Edit</md-button>
+					<!-- <md-button class="md-raised md-primary">Edit</md-button> -->
 					<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableUnAvailable')">Export</md-button>
 				</div>
 					  </md-content>
@@ -89,40 +274,90 @@
 					</tbody>
 				</table>
 				<div class="button-container">
-					<md-button class="md-raised md-primary">Edit</md-button>
+					<!-- <md-button class="md-raised md-primary">Edit</md-button> -->
 					<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTablePending')">Export</md-button>
 				</div>
 			</md-content>
 		</md-tab>
 		<md-tab label="Alarms: {{vm.alarmsCount}}" ng-click="sendEvent('ALARMS')">
 			<md-content class="md-padding">
-					<h2>Device Data Table</h2>
-					<table st-table="rowCollection" class="table table-striped" id="dataExportTableAlarms">
-						<thead>
-						<tr>
-							<th><input type="checkbox" ng-model="allAlarms"><span class="selectAll">Select</span></th>
-							<th>IMEI</th>
-							<th>SIM ID</th>
-							<th>Name</th>
-							<th>PTN</th>
-							<th>IPV4</th>
-							<th>IPV6</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr ng-repeat="deviceAlarm in vm.deviceCollectionAlarms">
-							<td><input type="checkbox" ng-checked="allAlarms"></td>
-							<td>{{deviceAlarm.imei}}</td>
-							<td>{{deviceAlarm.sim_id}}</td>
-							<td>{{deviceAlarm.name}}</td>
-							<td>{{deviceAlarm.ptn}}</td>
-							<td>{{deviceAlarm.ipv4}}</td>
-							<td>{{deviceAlarm.ipv6}}</td>
-						</tr>
-						</tbody>
-					</table>
+			<mdt-table id="dataExportTableAlarms"
+ table-card="{visible: true, title: 'Device Data Table', columnSelector: true}"
+			 alternate-headers="'contextual'"
+			 selectable-rows="true"
+             paginated-rows="{isEnabled: true, rowsPerPageValues: [4,10,20,50]}"
+			 selected-row-callback="selectedRowCallback(rows)"
+             mdt-row="{
+                      data:  vm.deviceCollectionAlarms,
+                      'table-row-id-key': 'id',
+                      'column-keys': [
+                          'status',
+                          'last_message',
+                          'imei',
+                          'device_type',
+                          'device_name',
+                          'carrier',
+                          'sim_no',
+						  'ptn',
+						  'ipv4_address',
+						  'ipv6_address',
+						  'model',
+						  'ethernet_1_clients',
+						  'linux_version',
+						  'modem_firmware_version',
+						  'radio_access_technology',
+						  'rsrp',
+						  'rsrq',
+						  'rssi',
+						  'sinr',
+						  'wifi_1_clients',
+						  'pri_version',
+						  'apn',
+						  'battery_per',
+						  'data_used',
+						  'active_input',
+						  'ec_io',
+						  'usb_input',
+						  'application_version',
+						  'modem_temprature'
+                      ]
+                      }">
+    <mdt-header-row>
+      
+      <!-- exclude-from-column-selector="true" excludes the column name from the selectable list  -->
+      <mdt-column align-rule="left"  exclude-from-column-selector="true"><span>STATUS</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Last Message</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IMEI</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Type</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Device Name</span></mdt-column>
+      <mdt-column align-rule="right" exclude-from-column-selector="true"><span>Carrier</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>SIM #</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>PTN</span></mdt-column>
+	  <mdt-column align-rule="right" exclude-from-column-selector="true"><span>IPV4 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>IPV6 Address</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Model</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Ethernet 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Linux Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Firmware Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Radio Access Technology</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRP</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSRQ</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>RSSI</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>SINR</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Wi-Fi 1 Clients</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>PRI Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>APN</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Battery %</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Data Used</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Active Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>EC/IO</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>USB Input</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Application Version</span></mdt-column>
+	  <mdt-column align-rule="right" hide-column-by-default="true"><span>Modem Temperature</span></mdt-column>
+    </mdt-header-row>
+  </mdt-table>
 					<div class="button-container">
-						<md-button class="md-raised md-primary">Edit</md-button>
+						<!-- <md-button class="md-raised md-primary">Edit</md-button> -->
 						<md-button class="md-raised md-primary" ng-click="exportToExcel('#dataExportTableAlarms')">Export</md-button>
 					</div>
 			  </md-content>

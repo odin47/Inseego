@@ -4,5 +4,5 @@
   'use strict';
 
   angular
-    .module('inseego.widgets', ['smart-table', 'ngMaterial']);
+    .module('inseego.widgets', ['ngMaterial', 'mdDataTable', 'ngMdIcons']);
 }());

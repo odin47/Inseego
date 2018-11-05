@@ -23,6 +23,11 @@ msgstr ""
 msgid "\"{{field}}\" should not contain null values"
 msgstr ""
 
+msgid "(1 child)"
+msgid_plural "({{$count}} children)"
+msgstr[0] ""
+msgstr[1] ""
+
 msgid "({{paging.more}} left)"
 msgstr ""
 
@@ -32,6 +37,12 @@ msgid ""
 msgstr ""
 
 msgid "<no name>"
+msgstr ""
+
+msgid "A graph display of a collection of data points"
+msgstr ""
+
+msgid "A table display of a collection of data points"
 msgstr ""
 
 msgid "ACCEPTED"
@@ -49,6 +60,12 @@ msgstr ""
 msgid "ACTIVE: triggered {{alarmTimeFromNow}}"
 msgstr ""
 
+msgid "ADMIN"
+msgstr ""
+
+msgid "ALARM"
+msgstr ""
+
 msgid "ALARM STATUS"
 msgstr ""
 
@@ -59,6 +76,9 @@ msgid "APN"
 msgstr ""
 
 msgid "ARRAY"
+msgstr ""
+
+msgid "AUDIT"
 msgstr ""
 
 msgid "Access denied requests"
@@ -106,6 +126,12 @@ msgstr ""
 msgid "Add action"
 msgstr ""
 
+msgid "Add alarm type"
+msgstr ""
+
+msgid "Add data point"
+msgstr ""
+
 msgid "Add device"
 msgstr ""
 
@@ -133,6 +159,9 @@ msgstr ""
 msgid "Add widget to dashboard"
 msgstr ""
 
+msgid "Add your first group or assign devices using the buttons on the toolbar."
+msgstr ""
+
 msgid "Address"
 msgstr ""
 
@@ -145,6 +174,9 @@ msgstr ""
 msgid "Agent config"
 msgstr ""
 
+msgid "Aggregation"
+msgstr ""
+
 msgid "Alarm"
 msgstr ""
 
@@ -155,6 +187,9 @@ msgid "Alarm count today"
 msgstr ""
 
 msgid "Alarm created"
+msgstr ""
+
+msgid "Alarm list"
 msgstr ""
 
 msgid "Alarm status changed to \"{{status}}\"."
@@ -173,9 +208,6 @@ msgid "All"
 msgstr ""
 
 msgid "All devices"
-msgstr ""
-
-msgid "Allow insecure use of elements and attributes"
 msgstr ""
 
 msgid "Allow support user access"
@@ -235,8 +267,19 @@ msgstr ""
 msgid "Are you sure?"
 msgstr ""
 
+msgid "Area"
+msgstr ""
+
 msgid "Ascending"
 msgstr ""
+
+msgid "Assign devices"
+msgstr ""
+
+msgid "Assign {{selectedDevices.length}} device"
+msgid_plural "Assign {{selectedDevices.length}} devices"
+msgstr[0] ""
+msgstr[1] ""
 
 msgid "At least 1 data point must be selected"
 msgstr ""
@@ -271,6 +314,9 @@ msgstr ""
 msgid "Band"
 msgstr ""
 
+msgid "Bars"
+msgstr ""
+
 msgid "Batch operations"
 msgstr ""
 
@@ -299,6 +345,12 @@ msgid "Bulk operation delay must be greater than {{minSeconds}} seconds!"
 msgstr ""
 
 msgid "Bulk operations"
+msgstr ""
+
+msgid "By active status"
+msgstr ""
+
+msgid "By severity"
 msgstr ""
 
 msgid "CANCELLED"
@@ -427,7 +479,16 @@ msgstr ""
 msgid "Cellular WAN"
 msgstr ""
 
+msgid "Center map"
+msgstr ""
+
 msgid "Change"
+msgstr ""
+
+msgid "Change aggregation or select shorter date range."
+msgstr ""
+
+msgid "Change color"
 msgstr ""
 
 msgid "Change log"
@@ -460,6 +521,9 @@ msgstr ""
 msgid "Charset"
 msgstr ""
 
+msgid "Chart type"
+msgstr ""
+
 msgid "Check Fresenius TDMS server IP"
 msgstr ""
 
@@ -473,6 +537,12 @@ msgid "Check MQTT keepalive interval"
 msgstr ""
 
 msgid "Check if TCS:BUS plugin enabled"
+msgstr ""
+
+msgid "Check user permission"
+msgstr ""
+
+msgid "Check user permissions section allows you to verify permissions granted to selected user for the device also inherited from parent devices or assinged to user group. Granted permission section allows you to check and manage permissions for the device."
 msgstr ""
 
 msgid "Checked"
@@ -524,6 +594,9 @@ msgid "Clear existing alarm"
 msgstr ""
 
 msgid "Clear filters"
+msgstr ""
+
+msgid "Clear geofence"
 msgstr ""
 
 msgid "Clear`an alarm`"
@@ -742,6 +815,14 @@ msgstr ""
 msgid "Create dashboard"
 msgstr ""
 
+msgid "Create group"
+msgstr ""
+
+msgid "Create group with one device"
+msgid_plural "Create group with {{selectedDevices.length}} devices"
+msgstr[0] ""
+msgstr[1] ""
+
 msgid "Create location update event"
 msgstr ""
 
@@ -823,6 +904,9 @@ msgstr ""
 msgid "Daily"
 msgstr ""
 
+msgid "Daily aggregation"
+msgstr ""
+
 msgid "Dark"
 msgstr ""
 
@@ -850,10 +934,28 @@ msgstr ""
 msgid "Dashboard visible to all users"
 msgstr ""
 
+msgid "Data explorer"
+msgstr ""
+
+msgid "Data has been truncated. Please use aggregation."
+msgstr ""
+
 msgid "Data logging"
 msgstr ""
 
+msgid "Data points"
+msgstr ""
+
+msgid "Data points graph"
+msgstr ""
+
+msgid "Data points table"
+msgstr ""
+
 msgid "Data type"
+msgstr ""
+
+msgid "Date &amp; time"
 msgstr ""
 
 msgid "Date/time"
@@ -869,6 +971,9 @@ msgid "Decimal separator"
 msgstr ""
 
 msgid "Default AT Commands"
+msgstr ""
+
+msgid "Default unit"
 msgstr ""
 
 msgid "Default value"
@@ -895,6 +1000,9 @@ msgstr ""
 msgid "Delete device"
 msgstr ""
 
+msgid "Delete group"
+msgstr ""
+
 msgid "Delete property"
 msgstr ""
 
@@ -904,13 +1012,22 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+msgid "Deselect all"
+msgstr ""
+
 msgid "Details"
 msgstr ""
 
 msgid "Device"
 msgstr ""
 
+msgid "Device Alarms"
+msgstr ""
+
 msgid "Device Control"
+msgstr ""
+
+msgid "Device Data Table"
 msgstr ""
 
 msgid "Device Guides"
@@ -920,6 +1037,9 @@ msgid "Device ID must not contain spaces or slashes (\"/\")."
 msgstr ""
 
 msgid "Device Info"
+msgstr ""
+
+msgid "Device Map"
 msgstr ""
 
 msgid "Device added to group"
@@ -975,10 +1095,19 @@ msgstr ""
 msgid "Device time"
 msgstr ""
 
+msgid "Device {{id}}"
+msgstr ""
+
+msgid "Device's name or value of any device's property"
+msgstr ""
+
 msgid "Devicemanagement User"
 msgstr ""
 
 msgid "Disabled"
+msgstr ""
+
+msgid "Display"
 msgstr ""
 
 msgid "Display as"
@@ -987,10 +1116,22 @@ msgstr ""
 msgid "Display current temperature on device"
 msgstr ""
 
-msgid "Display custom HTML code"
+msgid "Display selected roaming network"
 msgstr ""
 
-msgid "Display selected roaming network"
+msgid "Displays a list of alarms filtered by object, severity and status"
+msgstr ""
+
+msgid "Displays a map with position markers for selected devices."
+msgstr ""
+
+msgid "Displays alarms of all the devices"
+msgstr ""
+
+msgid "Displays information about the devices"
+msgstr ""
+
+msgid "Displays position of the devices on the map"
 msgstr ""
 
 msgid "Do you really want to delete device \"{{name}}\"? This operation is irreversible."
@@ -1032,13 +1173,25 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+msgid "Double click to add points and set the area. Click and drag the points to adjust."
+msgstr ""
+
 msgid "Download"
+msgstr ""
+
+msgid "Download as CSV"
+msgstr ""
+
+msgid "Download as Excel"
 msgstr ""
 
 msgid "Downloading"
 msgstr ""
 
 msgid "Downloading&hellip;"
+msgstr ""
+
+msgid "Drag X-Axis to move time.<br>Select time period to zoom.<br>Double click to zoom out."
 msgstr ""
 
 msgid "E-mail"
@@ -1050,6 +1203,9 @@ msgstr ""
 msgid "ECN0"
 msgstr ""
 
+msgid "EVENT"
+msgstr ""
+
 msgid "EXECUTING"
 msgstr ""
 
@@ -1057,6 +1213,9 @@ msgid "Edit"
 msgstr ""
 
 msgid "Edit dashboard"
+msgstr ""
+
+msgid "Edit geofence"
 msgstr ""
 
 msgid "Edit retention rule"
@@ -1104,6 +1263,9 @@ msgstr ""
 msgid "Enter a valid international phone number. The accepted format is +49 9 876 543 210."
 msgstr ""
 
+msgid "Enter address"
+msgstr ""
+
 msgid "Error detail"
 msgstr ""
 
@@ -1138,6 +1300,9 @@ msgid "Execute command template"
 msgstr ""
 
 msgid "Expand"
+msgstr ""
+
+msgid "Expected target value for datapoint"
 msgstr ""
 
 msgid "Export as CSV"
@@ -1224,6 +1389,9 @@ msgstr ""
 msgid "Find out more on the <a c8y-guide-href=\"users-guide/cockpit/#dashboards\">User Guide</a>."
 msgstr ""
 
+msgid "Find out more on the <a c8y-guide-href=\"users-guide/cockpit/#visualize\">User Guide</a>."
+msgstr ""
+
 msgid "Firmware"
 msgstr ""
 
@@ -1273,6 +1441,9 @@ msgid "GPS tracks hidden"
 msgstr ""
 
 msgid "GPS tracks visible"
+msgstr ""
+
+msgid "GROUP"
 msgstr ""
 
 msgid "GSM tracks hidden"
@@ -1527,10 +1698,22 @@ msgstr ""
 msgid "Go to source"
 msgstr ""
 
+msgid "Granted permission"
+msgstr ""
+
+msgid "Greetings"
+msgstr ""
+
+msgid "Greetings widget for Inseego"
+msgstr ""
+
 msgid "Grid"
 msgstr ""
 
 msgid "Group"
+msgstr ""
+
+msgid "Group \"{{name}}\" saved successfully!"
 msgstr ""
 
 msgid "Group dashboards can only be copied into a group."
@@ -1542,16 +1725,16 @@ msgstr ""
 msgid "Group name"
 msgstr ""
 
+msgid "Group {{name}} has been created!"
+msgstr ""
+
 msgid "Group:&nbsp;"
 msgstr ""
 
+msgid "Groups"
+msgstr ""
+
 msgid "Groups assignment"
-msgstr ""
-
-msgid "HTML"
-msgstr ""
-
-msgid "HTML code"
 msgstr ""
 
 msgid "Hardware"
@@ -1560,13 +1743,22 @@ msgstr ""
 msgid "Has full access to all deployed CEP modules and SmartRules"
 msgstr ""
 
+msgid "Has right to"
+msgstr ""
+
 msgid "Header style"
+msgstr ""
+
+msgid "Hello {{vm.currentUser}},"
 msgstr ""
 
 msgid "Help & Service"
 msgstr ""
 
 msgid "Help &amp; support"
+msgstr ""
+
+msgid "Here are a few data points to get you started"
 msgstr ""
 
 msgid "Hidden"
@@ -1582,6 +1774,9 @@ msgid "Hosted application"
 msgstr ""
 
 msgid "Hourly"
+msgstr ""
+
+msgid "Hourly aggregation"
 msgstr ""
 
 msgid "I/O and PLC"
@@ -1630,6 +1825,9 @@ msgid "Include symbols (e.g. !@#$%^)"
 msgstr ""
 
 msgid "Include uppercase characters (e.g. ABCDEF)"
+msgstr ""
+
+msgid "Info"
 msgstr ""
 
 msgid "Insert the code received via SMS"
@@ -1731,6 +1929,9 @@ msgstr ""
 msgid "Last occurrence of this alarm (device time)."
 msgstr ""
 
+msgid "Last update"
+msgstr ""
+
 msgid "Last updated"
 msgstr ""
 
@@ -1738,6 +1939,9 @@ msgid "Last week"
 msgstr ""
 
 msgid "Latitude"
+msgstr ""
+
+msgid "Left"
 msgstr ""
 
 msgid "Left margin"
@@ -1761,6 +1965,12 @@ msgstr ""
 msgid "Limit stream requests"
 msgstr ""
 
+msgid "Line"
+msgstr ""
+
+msgid "Line and points"
+msgstr ""
+
 msgid "List"
 msgstr ""
 
@@ -1770,7 +1980,16 @@ msgstr ""
 msgid "List of supported operations"
 msgstr ""
 
+msgid "Load '<small><i>{{kpi.c8y_Kpi.label}}</i></small>' from library"
+msgstr ""
+
 msgid "Load more"
+msgstr ""
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading data points…"
 msgstr ""
 
 msgid "Loading users&hellip;"
@@ -1780,6 +1999,9 @@ msgid "Locate"
 msgstr ""
 
 msgid "Location"
+msgstr ""
+
+msgid "Location for All Devices"
 msgstr ""
 
 msgid "Location in navigation"
@@ -1827,7 +2049,13 @@ msgstr ""
 msgid "MAJOR"
 msgstr ""
 
+msgid "MANAGED_OBJECT"
+msgstr ""
+
 msgid "MCC"
+msgstr ""
+
+msgid "MEASUREMENT"
 msgstr ""
 
 msgid "MINOR"
@@ -1863,7 +2091,13 @@ msgstr ""
 msgid "Manager"
 msgstr ""
 
+msgid "Map"
+msgstr ""
+
 msgid "Margin"
+msgstr ""
+
+msgid "Max"
 msgstr ""
 
 msgid "Max length: 1"
@@ -1875,6 +2109,9 @@ msgid "Max value: {{vm.field.attrs.c8yMax}}"
 msgstr ""
 
 msgid "Max value: {{vm.field.attrs.max}}"
+msgstr ""
+
+msgid "Max:"
 msgstr ""
 
 msgid "Maximum"
@@ -1893,6 +2130,9 @@ msgid "Maximum length"
 msgstr ""
 
 msgid "Measurement"
+msgstr ""
+
+msgid "Measurement:"
 msgstr ""
 
 msgid "Measurements"
@@ -1922,13 +2162,22 @@ msgstr ""
 msgid "Microservice"
 msgstr ""
 
+msgid "Min"
+msgstr ""
+
 msgid "Min value: {{vm.field.attrs.c8yMin}}"
 msgstr ""
 
 msgid "Min value: {{vm.field.attrs.min}}"
 msgstr ""
 
+msgid "Min:"
+msgstr ""
+
 msgid "Minimum"
+msgstr ""
+
+msgid "Minimum and maximum"
 msgstr ""
 
 msgid "Minimum length"
@@ -1941,6 +2190,9 @@ msgid "Minor alarms"
 msgstr ""
 
 msgid "Minutely"
+msgstr ""
+
+msgid "Minutely aggregation"
 msgstr ""
 
 msgid "Mobile"
@@ -1991,6 +2243,9 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
+msgid "Nearest measurement:"
+msgstr ""
+
 msgid "Netmask"
 msgstr ""
 
@@ -2003,10 +2258,19 @@ msgstr ""
 msgid "New"
 msgstr ""
 
+msgid "New group"
+msgstr ""
+
+msgid "New group name"
+msgstr ""
+
 msgid "New password"
 msgstr ""
 
 msgid "New password can't be the same as current one!"
+msgstr ""
+
+msgid "New permission"
 msgstr ""
 
 msgid "Next page"
@@ -2018,10 +2282,16 @@ msgstr ""
 msgid "No RDB snapshot assigned to this device. Get current RDB snapshot from device."
 msgstr ""
 
+msgid "No aggregation"
+msgstr ""
+
 msgid "No alarms"
 msgstr ""
 
 msgid "No alarms to display."
+msgstr ""
+
+msgid "No assets or devices found for '{{searchData.lastText}}'"
 msgstr ""
 
 msgid "No communication with device since {{timestamp | absoluteDate}}!"
@@ -2030,10 +2300,19 @@ msgstr ""
 msgid "No conversion"
 msgstr ""
 
+msgid "No data available."
+msgstr ""
+
+msgid "No data points found."
+msgstr ""
+
 msgid "No data received from device within required interval."
 msgstr ""
 
 msgid "No delegation"
+msgstr ""
+
+msgid "No devices assigned to group."
 msgstr ""
 
 msgid "No devices to display."
@@ -2063,10 +2342,16 @@ msgstr ""
 msgid "No operations have been invoked yet."
 msgstr ""
 
+msgid "No permissions for user."
+msgstr ""
+
 msgid "No position fragment in selected devices"
 msgstr ""
 
 msgid "No request was denied."
+msgstr ""
+
+msgid "No results found."
 msgstr ""
 
 msgid "No widgets to display."
@@ -2099,6 +2384,9 @@ msgstr ""
 msgid "Number of child devices"
 msgstr ""
 
+msgid "Number of children"
+msgstr ""
+
 msgid "Number of occurrences"
 msgstr ""
 
@@ -2108,7 +2396,13 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
+msgid "OPERATION"
+msgstr ""
+
 msgid "OPERATION STATUS"
+msgstr ""
+
+msgid "Object's fragment type (e.g. c8y_IsDevice) to which you grant permission. Note that to have access to an object, user has to have access to all its fragments. Use an asterisk (*) to grant permission to any object's fragment type."
 msgstr ""
 
 msgid "Offline"
@@ -2139,6 +2433,9 @@ msgid "Only showing {{count}} devices due to performance reasons"
 msgstr ""
 
 msgid "Only value"
+msgstr ""
+
+msgid "Open in Device management"
 msgstr ""
 
 msgid "OpenCellId"
@@ -2193,6 +2490,15 @@ msgid "Options"
 msgstr ""
 
 msgid "Or"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Order alarms by active status, severity, and time"
+msgstr ""
+
+msgid "Order alarms by severity and time"
 msgstr ""
 
 msgid "Order in navigation menu (10000 first, -10000 last)"
@@ -2258,6 +2564,12 @@ msgstr ""
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions"
+msgstr ""
+
+msgid "Permissions successfully updated"
+msgstr ""
+
 msgid "Platform application cannot be added to, nor removed from any tenant."
 msgstr ""
 
@@ -2267,7 +2579,13 @@ msgstr ""
 msgid "Please meet 4 out of 5 the conditions below"
 msgstr ""
 
+msgid "Please select at least one severity."
+msgstr ""
+
 msgid "Please type something to execute a search."
+msgstr ""
+
+msgid "Points"
 msgstr ""
 
 msgid "Position"
@@ -2393,6 +2711,9 @@ msgstr ""
 msgid "RDB snapshot has been saved in files repository!"
 msgstr ""
 
+msgid "READ"
+msgstr ""
+
 msgid "REPORT"
 msgstr ""
 
@@ -2435,6 +2756,9 @@ msgstr ""
 msgid "Read SupportLog"
 msgstr ""
 
+msgid "Read and write"
+msgstr ""
+
 msgid "Read current network status"
 msgstr ""
 
@@ -2447,10 +2771,28 @@ msgstr ""
 msgid "Realtime"
 msgstr ""
 
+msgid "Realtime active"
+msgstr ""
+
+msgid "Realtime inactive"
+msgstr ""
+
+msgid "Realtime is active. Deactivate it to edit date and time."
+msgstr ""
+
 msgid "Reboot device"
 msgstr ""
 
 msgid "Received signal code power"
+msgstr ""
+
+msgid "Recent Alarms of all the devices"
+msgstr ""
+
+msgid "Red range"
+msgstr ""
+
+msgid "Red range: {{min}} … {{max}}"
 msgstr ""
 
 msgid "Reference Guide"
@@ -2484,6 +2826,15 @@ msgid "Remove"
 msgstr ""
 
 msgid "Remove dashboard"
+msgstr ""
+
+msgid "Remove from list"
+msgstr ""
+
+msgid "Remove group"
+msgstr ""
+
+msgid "Remove permission"
 msgstr ""
 
 msgid "Render type"
@@ -2558,7 +2909,16 @@ msgstr ""
 msgid "Revision"
 msgstr ""
 
+msgid "Right"
+msgstr ""
+
 msgid "Right margin"
+msgstr ""
+
+msgid "Root Device"
+msgstr ""
+
+msgid "S/N"
 msgstr ""
 
 msgid "SCHEDULED"
@@ -2585,6 +2945,9 @@ msgstr ""
 msgid "SUCCESSFUL"
 msgstr ""
 
+msgid "SUPPORT"
+msgstr ""
+
 msgid "Save"
 msgstr ""
 
@@ -2592,6 +2955,9 @@ msgid "Save and continue"
 msgstr ""
 
 msgid "Save changes"
+msgstr ""
+
+msgid "Save to library"
 msgstr ""
 
 msgid "Scan M-Bus"
@@ -2603,6 +2969,18 @@ msgstr ""
 msgid "Schedule device restart every day at 1am"
 msgstr ""
 
+msgid "Scope"
+msgstr ""
+
+msgid "Scroll lock"
+msgstr ""
+
+msgid "Search all"
+msgstr ""
+
+msgid "Search controller"
+msgstr ""
+
 msgid "Search files"
 msgstr ""
 
@@ -2612,13 +2990,28 @@ msgstr ""
 msgid "Search more"
 msgstr ""
 
+msgid "Searching devices…"
+msgstr ""
+
 msgid "Select"
+msgstr ""
+
+msgid "Select all"
 msgstr ""
 
 msgid "Select content style"
 msgstr ""
 
 msgid "Select dashboard"
+msgstr ""
+
+msgid "Select data point"
+msgstr ""
+
+msgid "Select data points"
+msgstr ""
+
+msgid "Select device"
 msgstr ""
 
 msgid "Select file"
@@ -2637,6 +3030,9 @@ msgid "Select or search group"
 msgstr ""
 
 msgid "Select or search icon"
+msgstr ""
+
+msgid "Select or search user"
 msgstr ""
 
 msgid "Select properties"
@@ -2666,10 +3062,19 @@ msgstr ""
 msgid "Selected unit conversion will be used for displaying data. Choose \"No conversion\" to see original units sent by devices"
 msgstr ""
 
+msgid "Selection change is disabled."
+msgstr ""
+
 msgid "Send"
 msgstr ""
 
 msgid "Send alarms that are active since 30 minutes to email"
+msgstr ""
+
+msgid "Send as widget to dashboard"
+msgstr ""
+
+msgid "Send as widget to report"
 msgstr ""
 
 msgid "Send connection status unknown"
@@ -2888,6 +3293,9 @@ msgstr ""
 msgid "Set temperature threshold"
 msgstr ""
 
+msgid "Severities"
+msgstr ""
+
 msgid "Severity"
 msgstr ""
 
@@ -2907,6 +3315,9 @@ msgid "Show all breadcrumbs"
 msgstr ""
 
 msgid "Show checkboxes that are"
+msgstr ""
+
+msgid "Show date selection"
 msgstr ""
 
 msgid "Show details"
@@ -2956,6 +3367,11 @@ msgstr ""
 
 msgid "Showing 1 child device"
 msgid_plural "Showing {{devices.length}} child devices"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Showing 1 item"
+msgid_plural "Showing {{$count}} items"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -3043,6 +3459,12 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+msgid "Step after"
+msgstr ""
+
+msgid "Step before"
+msgstr ""
+
 msgid "Stop Process"
 msgstr ""
 
@@ -3061,10 +3483,16 @@ msgstr ""
 msgid "String is too short ({{viewValue.length}} chars), minimum {{schema.minLength}}!"
 msgstr ""
 
+msgid "Sub-assets"
+msgstr ""
+
 msgid "Subject"
 msgstr ""
 
 msgid "Submit"
+msgstr ""
+
+msgid "Successfully saved to library"
 msgstr ""
 
 msgid "Support"
@@ -3268,9 +3696,6 @@ msgstr ""
 msgid "Toggle full screen"
 msgstr ""
 
-msgid "Toggle help text"
-msgstr ""
-
 msgid "Toggle navigator"
 msgstr ""
 
@@ -3298,16 +3723,25 @@ msgstr ""
 msgid "Transparent"
 msgstr ""
 
+msgid "Truncated data."
+msgstr ""
+
 msgid "Type"
 msgstr ""
 
 msgid "Type your password"
 msgstr ""
 
+msgid "Types"
+msgstr ""
+
 msgid "UNSIGNED"
 msgstr ""
 
 msgid "URL"
+msgstr ""
+
+msgid "USER"
 msgstr ""
 
 msgid "Unable to get system option: '{{option}}'!"
@@ -3322,6 +3756,9 @@ msgstr ""
 msgid "Unassign device"
 msgstr ""
 
+msgid "Unassign item"
+msgstr ""
+
 msgid "Unchecked"
 msgstr ""
 
@@ -3334,10 +3771,16 @@ msgstr ""
 msgid "Unit conversion"
 msgstr ""
 
+msgid "Unit:"
+msgstr ""
+
 msgid "Unknown"
 msgstr ""
 
 msgid "Unlock"
+msgstr ""
+
+msgid "Update '<small class=\"text-muted\"><i>{{getLinkedKpiLabel()}}</i></small>' in library"
 msgstr ""
 
 msgid "Update severity of existing alarm"
@@ -3350,6 +3793,9 @@ msgid "Upload, choose file or add an URL"
 msgstr ""
 
 msgid "Use * to allow any values."
+msgstr ""
+
+msgid "Use the input field above to search for devices."
 msgstr ""
 
 msgid "User"
@@ -3433,7 +3879,13 @@ msgstr ""
 msgid "Validation rules"
 msgstr ""
 
+msgid "Validations are simple rules such as `min must be less than max`. Red bordered input fields will give you clues. You must also select at least one datapoint."
+msgstr ""
+
 msgid "Value and unit"
+msgstr ""
+
+msgid "Value displayed when data is aggregated"
 msgstr ""
 
 msgid "Value {{viewValue}} is equal to exclusive maximum {{schema.exclusiveMaximum}}!"
@@ -3452,6 +3904,9 @@ msgid "Value {{viewValue}} is not a valid number!"
 msgstr ""
 
 msgid "Value, unit and time"
+msgstr ""
+
+msgid "Vehicle location"
 msgstr ""
 
 msgid "Verification code"
@@ -3493,6 +3948,9 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
+msgid "Warning alarms"
+msgstr ""
+
 msgid "Warnings"
 msgstr ""
 
@@ -3523,19 +3981,40 @@ msgstr ""
 msgid "Widget margins"
 msgstr ""
 
+msgid "Widget successfully created"
+msgstr ""
+
 msgid "Widget title"
 msgstr ""
 
-msgid "You are successfully disconnected from {{externalServiceName}}. Please login to your {{externalServiceName}} account, and also perform de-registration there."
+msgid "Write"
 msgstr ""
 
-msgid "You can use the following variables in your HTML code:"
+msgid "Y Axis"
+msgstr ""
+
+msgid "Yellow range"
+msgstr ""
+
+msgid "Yellow range: {{min}} … {{max}}"
+msgstr ""
+
+msgid "You are successfully disconnected from {{externalServiceName}}. Please login to your {{externalServiceName}} account, and also perform de-registration there."
 msgstr ""
 
 msgid "You don't have permission to retrieve owner"
 msgstr ""
 
 msgid "You have reached devices limit. No more devices can be registered."
+msgstr ""
+
+msgid "You must add at least one data point."
+msgstr ""
+
+msgid "You must enable at least one datapoint."
+msgstr ""
+
+msgid "You need to fix validation errors before you can save."
 msgstr ""
 
 msgid "You will receive emails with csv/excel files attached for {{count}} series."
@@ -3559,7 +4038,16 @@ msgstr ""
 msgid "accuracy"
 msgstr ""
 
+msgid "add some notes"
+msgstr ""
+
+msgid "all types of objects"
+msgstr ""
+
 msgid "altitude"
+msgstr ""
+
+msgid "any"
 msgstr ""
 
 msgid "applications {{list}} added"
@@ -3577,16 +4065,13 @@ msgstr ""
 msgid "cellId"
 msgstr ""
 
-msgid "children of current device or group, you can access their properties e.g."
+msgid "check the latest updates"
 msgstr ""
 
 msgid "comma - ,"
 msgstr ""
 
 msgid "configuration"
-msgstr ""
-
-msgid "current device or group, you can access its properties e.g."
 msgstr ""
 
 msgid "description=\"{{description | translate}}\""
@@ -3635,6 +4120,9 @@ msgid "e.g. My Device, you can use * as wildcard character"
 msgstr ""
 
 msgid "e.g. My dashboard"
+msgstr ""
+
+msgid "e.g. My group"
 msgstr ""
 
 msgid "e.g. My message"
@@ -3724,21 +4212,6 @@ msgstr ""
 msgid "no description"
 msgstr ""
 
-msgid "number of device groups"
-msgstr ""
-
-msgid "number of devices"
-msgstr ""
-
-msgid "number of devices with critical alarm status"
-msgstr ""
-
-msgid "number of online devices"
-msgstr ""
-
-msgid "number of users"
-msgstr ""
-
 msgid "or"
 msgstr ""
 
@@ -3773,6 +4246,9 @@ msgid "roles {{list}} removed"
 msgstr ""
 
 msgid "rssi value"
+msgstr ""
+
+msgid "searching \"{{expression}}\""
 msgstr ""
 
 msgid "seconds"
@@ -3827,6 +4303,9 @@ msgid "version"
 msgstr ""
 
 msgid "weak"
+msgstr ""
+
+msgid "with"
 msgstr ""
 
 msgid "{{firstItem}} to {{lastItem}}"

@@ -1,1 +1,0 @@
-{"name":"Core Cumulocity UI","ngModules":["c8y.ui"],"onlyModuleNameContextPath":true,"description":"Core UI framework for Cumulocity applications","imports":["c8ydata"],"ignoreIfUpgrade":["ui/containers/root.component.js"],"js":["main.js"],"css":["style.css"],"version":"9.12.5","compatibility":{"app":"core","contextPath":"core","rootContextPath":"core"},"contextPath":"core"}

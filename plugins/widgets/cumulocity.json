@@ -18,16 +18,21 @@
      "alarms/widget.component.js",
      
      "node_modules/angular-smart-table/dist/smart-table.min.js",
+     "deviceDataTableWidget/md-data-table/dist/md-data-table-templates.js",
+     "deviceDataTableWidget/md-data-table/dist/md-data-table.js",
+     "node_modules/angular-material-icons/angular-material-icons.js",
      "node_modules/angular/angular.min.js",
      "node_modules/angular-animate/angular-animate.js",
      "node_modules/angular-aria/angular-aria.min.js",
-     "node_modules/angular-material/angular-material.min.js"
+     "node_modules/angular-material/angular-material.min.js",
+     "node_modules/angular-material-icons/angular-material-icons.js"
     ],
     "imports": [
     ],
     "css": [
       "deviceDataTableWidget/widget.css",
-      "node_modules/angular-material/angular-material.min.css"
+      "node_modules/angular-material/angular-material.min.css",
+      "deviceDataTableWidget/md-data-table/dist/md-data-table-style.css"      
     ],
     "copy": []
   }

@@ -8,8 +8,10 @@
     "angular-animate": "^1.7.5",
     "angular-aria": "^1.7.5",
     "angular-material": "^1.1.10",
+    "angular-material-icons": "^0.7.1",
     "angular-smart-table": "^2.1.11",
-    "cumulocity-ui-build": "^9.12.5"
+    "cumulocity-ui-build": "^9.12.5",
+    "md-data-table": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
